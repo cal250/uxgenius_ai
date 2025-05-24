@@ -1,1 +1,53 @@
 @import "flowbite";
+
+/* globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+Custom global styles
+
+html,
+body {
+  height: 100%;
+  font-family: 'Inter', sans-serif; /* You can customize font */
+  background-color: #fff;
+  color: #1f2937; /* Tailwind's gray-800 */
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Fix for Flowbite dropdown z-index or modal if needed */
+[data-flowbite] {
+  z-index: 9999;
+}
+
+/* Example: smooth transitions for buttons and links */
+button,
+a {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar styling (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f3f4f6; /* Tailwind gray-100 */
+}
+::-webkit-scrollbar-thumb {
+  background-color: #6366f1; /* Tailwind indigo-500 */
+  border-radius: 4px;
+  border: 2px solid #f3f4f6;
+}
