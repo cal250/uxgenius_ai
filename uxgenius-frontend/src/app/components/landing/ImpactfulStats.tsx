@@ -33,7 +33,7 @@ export default function ImpactfulStats() {
                          {/* Image Section */}
                          <div className="relative rounded-xl overflow-hidden shadow-xl">
                               <Image
-                                   src="/images/metrics-dashboard.png"
+                                   src="/images/dash.png"
                                    alt="UX Metrics Dashboard"
                                    width={600}
                                    height={400}
