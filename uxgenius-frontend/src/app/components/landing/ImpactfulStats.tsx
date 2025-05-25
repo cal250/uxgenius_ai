@@ -33,10 +33,10 @@ export default function ImpactfulStats() {
                          {/* Image Section */}
                          <div className="relative rounded-xl overflow-hidden shadow-xl">
                               <Image
-                                   src="/images/dash.png"
-                                   alt="UX Metrics Dashboard"
-                                   width={600}
-                                   height={400}
+                                   src="/images/mob.png"
+                                   alt="Mobile"
+                                   width={400}
+                                   height={200}
                                    className="w-full h-auto"
                               />
                               {/* Animated metric overlay */}

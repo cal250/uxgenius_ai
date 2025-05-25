@@ -29,30 +29,32 @@ export default function FAQ() {
 
   return (
     <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900">
-          Frequently Asked Questions
-        </h2>
+      <div className="max-w-7xl mx-auto flex justify-center">
+        <div className="w-full max-w-[60%]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900">
+            Frequently Asked Questions
+          </h2>
 
-        <Accordion
-          className="divide-y divide-gray-200/60"
-        >
-          {faqItems.map((item, index) => (
-            <Accordion.Panel
-              key={index}
-              className="border-gray-200/60"
-            >
-              <Accordion.Title className="text-base sm:text-lg font-medium text-gray-900 hover:bg-gray-100 px-3 sm:px-4 py-4 sm:py-5">
-                {item.question}
-              </Accordion.Title>
-              <Accordion.Content className="px-3 sm:px-4 py-4 sm:py-5">
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  {item.answer}
-                </p>
-              </Accordion.Content>
-            </Accordion.Panel>
-          ))}
-        </Accordion>
+          <Accordion
+            className="divide-y divide-gray-200/60"
+          >
+            {faqItems.map((item, index) => (
+              <Accordion.Panel
+                key={index}
+                className="border-gray-200/60"
+              >
+                <Accordion.Title className="text-base sm:text-lg font-medium text-gray-900 hover:bg-gray-100 px-3 sm:px-4 py-4 sm:py-5">
+                  {item.question}
+                </Accordion.Title>
+                <Accordion.Content className="px-3 sm:px-4 py-4 sm:py-5">
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                    {item.answer}
+                  </p>
+                </Accordion.Content>
+              </Accordion.Panel>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </section>
   );
