@@ -1,77 +1,41 @@
-"use client";
+import { Navbar } from 'flowbite-react';
 
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-
-export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+/**
+ * Header component with navigation links and auth buttons
+ * Uses Flowbite Navbar with responsive collapse
+ */
+export default function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <a href="/" className="flex items-center space-x-2">
-          <img
-            src="https://via.placeholder.com/140x40?text=LOGO"
-            alt="UXGenius Logo"
-            className="h-10 w-auto"
-          />
-        </a>
-
-        {/* Desktop nav links */}
-        <nav className="hidden lg:flex items-center space-x-8 text-sm font-medium text-gray-700">
-          <a href="#features" className="hover:text-indigo-600">Features</a>
-          <a href="#solutions" className="hover:text-indigo-600">Solutions</a>
-          <a href="#pricing" className="hover:text-indigo-600">Pricing</a>
-          <a href="#about" className="hover:text-indigo-600">About</a>
-          <a href="#contact" className="hover:text-indigo-600">Contact</a>
-        </nav>
-
-        {/* Right-side buttons */}
-        <div className="hidden lg:flex items-center space-x-4">
-          <a
-            href="/login"
-            className="text-sm font-medium text-gray-700 hover:text-indigo-600"
-          >
-            Log In
-          </a>
-          <a
-            href="/register"
-            className="bg-indigo-600 text-white text-sm font-semibold px-6 py-2 rounded-lg hover:bg-indigo-500 transition"
-          >
-            Get Started
-          </a>
-        </div>
-
-        {/* Mobile menu toggle */}
-        <button
-          className="lg:hidden text-gray-700"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+    <Navbar fluid rounded className="max-w-7xl mx-auto px-4 py-6">
+      <Navbar.Brand href="/">
+        <span className="text-2xl font-bold text-gray-900">UXGenius.ai</span>
+      </Navbar.Brand>
+      <div className="flex md:order-2 gap-4">
+        <button className="text-gray-600 hover:text-gray-900 font-medium">
+          Log In
         </button>
+        <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+          Get started
+        </button>
+        <Navbar.Toggle />
       </div>
-
-      {/* Mobile dropdown menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden bg-white px-6 pt-4 pb-6 shadow-md">
-          <nav className="flex flex-col space-y-4 text-sm font-medium text-gray-700">
-            <a href="#features" className="hover:text-indigo-600">Features</a>
-            <a href="#solutions" className="hover:text-indigo-600">Solutions</a>
-            <a href="#pricing" className="hover:text-indigo-600">Pricing</a>
-            <a href="#about" className="hover:text-indigo-600">About</a>
-            <a href="#contact" className="hover:text-indigo-600">Contact</a>
-            <hr className="my-2 border-gray-200" />
-            <a href="/login" className="hover:text-indigo-600">Log In</a>
-            <a
-              href="/register"
-              className="bg-indigo-600 text-white text-center py-2 rounded-lg mt-2"
-            >
-              Get Started
-            </a>
-          </nav>
-        </div>
-      )}
-    </header>
+      <Navbar.Collapse>
+        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900">
+          Product
+        </Navbar.Link>
+        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900">
+          Services
+        </Navbar.Link>
+        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900">
+          Pricing
+        </Navbar.Link>
+        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900">
+          Use Cases
+        </Navbar.Link>
+        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900">
+          Contact
+        </Navbar.Link>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }

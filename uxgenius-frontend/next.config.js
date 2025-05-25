@@ -3,7 +3,26 @@ const nextConfig = {
      reactStrictMode: true,
      swcMinify: true,
      images: {
-          domains: ['via.placeholder.com'], // Added placeholder.com for demo images
+          remotePatterns: [
+               {
+                    protocol: 'https',
+                    hostname: 'via.placeholder.com',
+                    port: '',
+                    pathname: '/**',
+               },
+               {
+                    protocol: 'https',
+                    hostname: 'images.unsplash.com',
+                    port: '',
+                    pathname: '/**',
+               },
+               {
+                    protocol: 'https',
+                    hostname: 'source.unsplash.com',
+                    port: '',
+                    pathname: '/**',
+               }
+          ],
      },
      // Enable static exports if needed
      // output: 'export',

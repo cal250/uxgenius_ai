@@ -1,27 +1,25 @@
-import Navbar from './components/common/Navbar';
-import Hero from './components/landing/HeroSection';
-import Features from './components/landing/Features';
-import HowItWorks from './components/landing/HowItWorks';
-import Solutions from './components/landing/Solutions';
-import ValueProps from './components/landing/ValueProps';
-import Pricing from './components/landing/Pricing';
-import FreeAuditCTA from './components/landing/FreeAuditCTA';
-import FAQs from './components/landing/FAQs';
-import Footer from './components/common/Footer';
+import Header from 'app/components/common/Navbar';
+import HeroSection from '@/app/components/landing/HeroSection';
+import Features from '@/app/components/landing/Features';
+import Solutions from '@/app/components/landing/Solutions';
+import Pricing from '@/app/components/landing/Pricing';
+import ImpactStats from '@/app/components/landing/ImpactStats';
+import FAQ from '@/app/components/landing/FAQs';
+import FreeTrial from '@/app/components/landing/FreeTrial';
+import Footer from '@/app/components/common/Footer';
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <>
-      <Navbar />
-      <Hero />
+    <div className="min-h-screen">
+      <Header />
+      <HeroSection />
       <Features />
-      <HowItWorks />
       <Solutions />
-      <ValueProps />
+      <ImpactStats />
       <Pricing />
-      <FreeAuditCTA />
-      <FAQs />
+      <FAQ />
+      <FreeTrial />
       <Footer />
-    </>
+    </div>
   );
 }

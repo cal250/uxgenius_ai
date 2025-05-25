@@ -1,102 +1,64 @@
-// app/components/Pricing.tsx
-
-const plans = [
+const PLANS = [
   {
-    name: "Architect",
-    price: "$289",
-    billing: "year",
+    name: 'Architect',
+    price: '$289',
     features: [
-      "AI UX Agent coaching",
-      "Full Heuristic Evaluation",
-      "Prioritized Issues by ROI impact",
-      "Track Audit History & Changes",
-      "Multiple Pages per Audit (up to 3)",
-    ],
-    badge: "For growth teams",
-    icon: "🏗️",
-    highlighted: false,
+      'AI UX Agent coaching',
+      'Full Heuristic Evaluation',
+      'Prioritized Issues by ROI impact',
+      'Track Audit History & Changes',
+      'Multiple Pages per Audit (up to 3)'
+    ]
   },
   {
-    name: "Visionary",
-    price: "$789",
-    billing: "year",
+    name: 'Visionary',
+    price: '$789',
     features: [
-      "Everything in Architect",
-      "CTA Effectiveness Analysis",
-      "Conversion Friction Detection",
-      "Accessibility check (Color, Fonts, WCAG)",
-      "Tone & Microcopy Clarity Check",
-      "Multiple Pages per Audit (up to 10)",
-    ],
-    badge: "Best for Ecom/SaaS",
-    icon: "🔭",
-    highlighted: true,
+      'Everything from Architect Plus...',
+      'CTA Effectiveness Analysis',
+      'Conversion Friction Detection',
+      'Accessibility check (Color, Fonts, WCAG)',
+      'Tone & Microcopy Clarity Check',
+      'Multiple Pages per Audit (up to 10)'
+    ]
   },
   {
-    name: "Omniscient",
-    price: "$1,899",
-    billing: "year",
+    name: 'Omniscient',
+    price: '$1,899',
     features: [
-      "Everything in Visionary",
-      "White-Labeled Reports & Tools",
-      "AI-Powered Competitor Comparison",
-      "Personalized Strategy Brief",
-      "Onboarding Flow Clarity Audit",
-      "Multiple Pages per Audit (unlimited)",
-    ],
-    badge: "All-access UX intelligence",
-    icon: "🧠",
-    highlighted: false,
-  },
+      'Everything from Visionary Plus...',
+      'White-Labeled Reports & Tools',
+      'AI-Powered Competitor Comparison',
+      'Personalized Strategy Brief',
+      'Onboarding Flow Clarity Audit',
+      'Multiple Pages per Audit (unlimited)'
+    ]
+  }
 ];
 
 export default function Pricing() {
   return (
-    <section className="bg-white py-20 px-6 text-center" id="pricing">
-      <h2 className="text-3xl font-bold text-gray-900 mb-4">
-        Built for teams that care about growth, not guesswork
-      </h2>
-      <p className="text-gray-600 max-w-xl mx-auto mb-12 text-base">
-        UXGenius gives you the clarity, insights, and tools to turn UX problems into profit — whether you're scaling a product, running an ecom brand, or improving customer journeys.
-      </p>
-
-      <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        {plans.map((plan, i) => (
-          <div
-            key={i}
-            className={`rounded-lg p-6 border shadow-sm hover:shadow-md transition ${
-              plan.highlighted ? "border-blue-600 scale-[1.02]" : "border-gray-200"
-            }`}
-          >
-            {/* Badge + Icon */}
-            <span className="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-semibold inline-block mb-2">
-              {plan.badge}
-            </span>
-            <div className="text-4xl mb-3">{plan.icon}</div>
-
-            {/* Title + Price */}
-            <h3 className="text-2xl font-semibold mb-1">{plan.name}</h3>
-            <p className="text-3xl font-bold text-blue-600 mb-1">{plan.price}</p>
-            <p className="text-sm text-gray-500 mb-6">per {plan.billing}</p>
-
-            {/* Features */}
-            <ul className="text-left space-y-2 text-gray-700 text-sm mb-6">
-              {plan.features.map((f, j) => (
-                <li key={j}>✓ {f}</li>
-              ))}
-            </ul>
-
-            {/* CTA */}
-            <a
-              href="#"
-              className={`block px-6 py-3 rounded-md text-white font-medium ${
-                plan.highlighted ? "bg-blue-600" : "bg-gray-800"
-              }`}
-            >
-              Get started
-            </a>
-          </div>
-        ))}
+    <section className="py-20 px-4 bg-white">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-12">Pricing</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {PLANS.map((plan) => (
+            <div key={plan.name} className="border rounded-xl p-8">
+              <h3 className="text-xl font-bold mb-4">{plan.name}</h3>
+              <p className="text-4xl font-bold mb-6">{plan.price}/year</p>
+              <ul className="space-y-4">
+                {plan.features.map((feature) => (
+                  <li key={feature} className="flex items-center">
+                    <svg className="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
