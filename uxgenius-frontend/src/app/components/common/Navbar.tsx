@@ -21,16 +21,16 @@ export default function Header() {
         <Navbar.Link href="/product" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
           Product
         </Navbar.Link>
-        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
+        <Navbar.Link href="/services" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
           Services
         </Navbar.Link>
-        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
+        <Navbar.Link href="/pricing" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
           Pricing
         </Navbar.Link>
-        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
+        <Navbar.Link href="/use-case" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
           Use Cases
         </Navbar.Link>
-        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
+        <Navbar.Link href="/contact" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
           Contact
         </Navbar.Link>
       </Navbar.Collapse>
