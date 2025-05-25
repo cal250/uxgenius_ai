@@ -4,12 +4,12 @@ import { HiEnvelope } from 'react-icons/hi2';
 
 export default function NewsletterSubscription() {
      return (
-          <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-900 text-white">
+          <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white text-gray-900">
                <div className="max-w-7xl mx-auto text-center">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
                          UX Is Evolving. So Should You.
                     </h2>
-                    <p className="text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
+                    <p className="text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto text-gray-600">
                          Join Our Mailing List Now! Stay ahead of the curve with updates, tips, and insights from a
                          team with 20+ years of UX leadership—and a front-row seat into AI.
                     </p>
@@ -22,7 +22,7 @@ export default function NewsletterSubscription() {
                               <input
                                    type="email"
                                    placeholder="Enter your email"
-                                   className="w-full pl-10 pr-4 py-2.5 sm:py-3 rounded-lg text-gray-900 text-sm sm:text-base focus:ring-2 focus:ring-blue-300"
+                                   className="w-full pl-10 pr-4 py-2.5 sm:py-3 rounded-lg bg-gray-50 text-gray-900 text-sm sm:text-base focus:ring-2 focus:ring-blue-500 border border-gray-200"
                               />
                          </div>
                          <button
@@ -33,7 +33,7 @@ export default function NewsletterSubscription() {
                          </button>
                     </form>
 
-                    <p className="text-xs sm:text-sm mt-3 sm:mt-4 opacity-75">
+                    <p className="text-xs sm:text-sm mt-3 sm:mt-4 text-gray-500">
                          No junk or fluff. Just impactful info about UX & AI
                     </p>
                </div>
