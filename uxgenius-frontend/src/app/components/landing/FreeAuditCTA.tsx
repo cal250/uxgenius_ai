@@ -1,81 +1,77 @@
-'use client';
+import React from 'react';
 
-import Image from 'next/image';
-import { HiArrowRight } from 'react-icons/hi2';
-
-export default function FreeAuditCTA() {
+const UXAuditComponent = () => {
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8 items-center">
-          {/* Left Image */}
-          <div className="hidden md:block relative h-48 sm:h-56 md:h-64 rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/images/mob.png"
-              alt="Problem Interface Example"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+    <div className="flex flex-col md:flex-row bg-gradient-to-r from-green-50 to-gray-100 p-8 min-h-screen">
+      {/* Left Section */}
+      <div className="md:w-1/2 p-6 space-y-6">
+        <h1 className="text-3xl font-bold text-gray-800">What&#39;s Inside a UXGenius Audit</h1>
+        <p className="text-gray-600">
+          See exactly how we break down your site&#39;s user experience—from high-level scoring to deep, actionable recommendations. Every audit is built on the proven UX principles and backed by AI-driven insights.
+        </p>
+        <div className="space-y-4">
+          <div className="flex items-center">
+            <span className="text-blue-600 mr-2">⚙️</span>
+            <div>
+              <h3 className="font-semibold text-gray-800">UX Score</h3>
+              <p className="text-gray-600 text-sm">
+                0-100 rating based on usability, clarity, conversion readiness and much more (depending on subscription plan)
+              </p>
+            </div>
           </div>
-
-          {/* Center Content */}
-          <div className="text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
-              Don't let a confusing interface<br className="hidden sm:block" />
-              undo everything you've built.
-            </h2>
-
-            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 max-w-xl mx-auto">
-              UXGenius helps you clean it up, clear the path, and turn curious visitors
-              into confident buyers—one smart fix at a time.
-            </p>
-
-            <button className="bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-medium hover:bg-blue-700 transition-colors mb-4 inline-flex items-center gap-2">
-              Get My Free Audit!
-              <HiArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-            </button>
-
-            <p className="text-gray-600 text-xs sm:text-sm">
-              Our team has seen almost everything...<br />
-              Start free, run one audit, and spot what's silently killing conversions.
-            </p>
+          <div className="flex items-center">
+            <span className="text-yellow-500 mr-2">▲</span>
+            <div>
+              <h3 className="font-semibold text-gray-800">Top 5 Issues Identified</h3>
+              <p className="text-gray-600 text-sm">
+                Prioritized by impact so you know what to fix first, and what impact it will have on your website
+              </p>
+            </div>
           </div>
-
-          {/* Right Image */}
-          <div className="hidden md:block relative h-48 sm:h-56 md:h-64 rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/images/cta-after.png"
-              alt="Improved Interface Example"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+          <div className="flex items-center">
+            <span className="text-red-500 mr-2">⚠️</span>
+            <div>
+              <h3 className="font-semibold text-gray-800">Conversion Killers Flagged</h3>
+              <p className="text-gray-600 text-sm">
+                Key UX issues identified to increase sales-like confusing CTAs, poor mobile layout or friction filled forms—so you can fix them fast
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <span className="text-purple-500 mr-2">🔍</span>
+            <div>
+              <h3 className="font-semibold text-gray-800">UX Patterns Analyzed</h3>
+              <p className="text-gray-600 text-sm">
+                Our audit evaluates 30+ design heuristics from layout to microcopy to ensure your site is optimized to produce the best results.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <span className="text-green-500 mr-2">📈</span>
+            <div>
+              <h3 className="font-semibold text-gray-800">One Audit = Real Revenue Gains</h3>
+              <p className="text-gray-600 text-sm">
+                Most users see measurable conversion improvements within days—making even a single audit worth thousands in recovered revenue
+              </p>
+            </div>
           </div>
         </div>
+      </div>
 
-        {/* Mobile Images */}
-        <div className="md:hidden grid gap-4 sm:gap-6 mt-8 sm:mt-12">
-          <div className="relative h-40 sm:h-48 w-full rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/images/cta-before-mobile.png"
-              alt="Problem Interface Mobile"
-              fill
+      {/* Right Section */}
+      <div className="md:w-1/2 flex justify-center items-center">
+        <div className="relative">
+          <div className="w-[500px] h-[600px] bg-gray-200 rounded-lg shadow-lg flex items-center justify-center">
+            <img
+              src="/images/dash.png"
+              alt="Placeholder"
               className="object-cover"
-              sizes="100vw"
-            />
-          </div>
-          <div className="relative h-40 sm:h-48 w-full rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/images/cta-after-mobile.png"
-              alt="Improved Interface Mobile"
-              fill
-              className="object-cover"
-              sizes="100vw"
             />
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default UXAuditComponent;
