@@ -6,6 +6,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* globals.css */
+.pricing-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
 @keyframes scan {
   0% { transform: translateY(-100%); }
   100% { transform: translateY(100%); }

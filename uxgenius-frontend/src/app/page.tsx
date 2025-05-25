@@ -1,24 +1,48 @@
-import Header from 'app/components/common/Navbar';
-import HeroSection from '@/app/components/landing/HeroSection';
-import Features from '@/app/components/landing/Features';
-import Solutions from '@/app/components/landing/Solutions';
-import Pricing from '@/app/components/landing/Pricing';
-import ImpactStats from '@/app/components/landing/ImpactStats';
-import FAQ from '@/app/components/landing/FAQs';
-import FreeTrial from '@/app/components/landing/FreeTrial';
-import Footer from '@/app/components/common/Footer';
+// app/page.tsx
+import HeroSection from '@/components/landing/HeroSection';
+import ValueProps from '@/components/landing/ValueProps';
+import HowItWorks from '@/components/landing/HowItWorks';
+import Features from '@/components/landing/Features';
+import Solutions from '@/components/landing/Solutions';
+import ImpactfulStats from '@/components/landing/ImpactfulStats';
+import Pricing from '@/components/landing/Pricing';
+import FreeTrial from '@/components/landing/FreeTrial';
+import BadUXAnalogies from '@/components/landing/BadUXAnalogies';
+import FAQ from '@/components/landing/FAQs';
+import FreeAuditCTA from '@/components/landing/FreeAuditCTA';
+import NewsletterSubscription from '@/components/landing/NewsletterSubscription';
+import Footer from '@/components/common/Footer';
+import Header from '@/components/common/Navbar';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
+
       <HeroSection />
+
+      <ValueProps />
+
+      <HowItWorks />
+
       <Features />
+
       <Solutions />
-      <ImpactStats />
+
+      <ImpactfulStats />
+
       <Pricing />
-      <FAQ />
+
       <FreeTrial />
+
+      <BadUXAnalogies />
+
+      <FAQ />
+
+      <FreeAuditCTA />
+
+      <NewsletterSubscription />
+
       <Footer />
     </div>
   );

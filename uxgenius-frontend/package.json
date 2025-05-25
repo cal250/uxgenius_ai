@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "clean": "rimraf .next",
+    "clean:dev": "npm run clean && next dev",
     "build": "rimraf .next && next build",
     "start": "next start",
     "lint": "next lint"

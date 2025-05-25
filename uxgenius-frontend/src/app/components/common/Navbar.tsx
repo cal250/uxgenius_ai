@@ -1,38 +1,36 @@
+'use client';
+
 import { Navbar } from 'flowbite-react';
 
-/**
- * Header component with navigation links and auth buttons
- * Uses Flowbite Navbar with responsive collapse
- */
 export default function Header() {
   return (
-    <Navbar fluid rounded className="max-w-7xl mx-auto px-4 py-6">
+    <Navbar fluid rounded className="max-w-7xl mx-auto px-4 py-4 md:py-6">
       <Navbar.Brand href="/">
-        <span className="text-2xl font-bold text-gray-900">UXGenius.ai</span>
+        <span className="text-xl md:text-2xl font-bold text-gray-900">UXGenius.ai</span>
       </Navbar.Brand>
-      <div className="flex md:order-2 gap-4">
-        <button className="text-gray-600 hover:text-gray-900 font-medium">
+      <div className="flex md:order-2 gap-2 md:gap-4 items-center">
+        <button className="text-gray-600 hover:text-gray-900 font-medium text-sm md:text-base">
           Log In
         </button>
-        <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+        <button className="bg-blue-600 text-white px-4 md:px-6 py-2 rounded-lg hover:bg-blue-700 text-sm md:text-base whitespace-nowrap">
           Get started
         </button>
-        <Navbar.Toggle />
+        <Navbar.Toggle className="ml-2" />
       </div>
-      <Navbar.Collapse>
-        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900">
+      <Navbar.Collapse className="mt-4 md:mt-0">
+        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
           Product
         </Navbar.Link>
-        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900">
+        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
           Services
         </Navbar.Link>
-        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900">
+        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
           Pricing
         </Navbar.Link>
-        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900">
+        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
           Use Cases
         </Navbar.Link>
-        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900">
+        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
           Contact
         </Navbar.Link>
       </Navbar.Collapse>
