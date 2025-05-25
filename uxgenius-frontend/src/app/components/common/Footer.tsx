@@ -11,7 +11,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {['About', 'Vision & Mission', 'Contact'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="hover:text-gray-900 text-sm sm:text-base transition-colors block">{item}</a>
+                  <a href="/" className="hover:text-gray-900 text-sm sm:text-base transition-colors block">{item}</a>
                 </li>
               ))}
             </ul>
@@ -23,7 +23,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {['Features', 'Services', 'Pricing'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="hover:text-gray-900 text-sm sm:text-base transition-colors block">{item}</a>
+                  <a href="/" className="hover:text-gray-900 text-sm sm:text-base transition-colors block">{item}</a>
                 </li>
               ))}
             </ul>
@@ -35,7 +35,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {['Privacy Policy', 'Terms & Conditions', 'Cookie Policy'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="hover:text-gray-900 text-sm sm:text-base transition-colors block">{item}</a>
+                  <a href="/" className="hover:text-gray-900 text-sm sm:text-base transition-colors block">{item}</a>
                 </li>
               ))}
             </ul>
