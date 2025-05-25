@@ -8,9 +8,9 @@ import ImpactfulStats from '@/components/landing/ImpactfulStats';
 import Pricing from '@/components/landing/Pricing';
 import FreeTrial from '@/components/landing/FreeTrial';
 import BadUXAnalogies from '@/components/landing/BadUXAnalogies';
-import FAQ from '@/components/landing/FAQs';
+import FAQ from '@/components/common/FAQs';
 import FreeAuditCTA from '@/components/landing/FreeAuditCTA';
-import NewsletterSubscription from '@/components/landing/NewsletterSubscription';
+import NewsletterSubscription from '@/components/common/NewsletterSubscription';
 import Footer from '@/components/common/Footer';
 import Header from '@/components/common/Navbar';
 
