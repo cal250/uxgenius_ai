@@ -11,13 +11,17 @@ export default function HeroSection() {
           {/* Text Content */}
           <div className="lg:w-1/2 text-center lg:text-left">
             <div className="mb-6 md:mb-8">
-              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+              <p>
+              <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                 New
               </span>
+            
+              Let our UXGenius AI Agent help today!
+          
+              </p>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
-              Let our UXGenius AI Agent help today!<br className="hidden sm:block" />
               Turn UX Issues Into <br className="hidden sm:block" />
               <span className="text-blue-600">Revenue Fast!</span>
             </h1>

@@ -6,6 +6,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply antialiased;
+}
 /* globals.css */
 .pricing-card {
   transition: all 0.2s ease-in-out;

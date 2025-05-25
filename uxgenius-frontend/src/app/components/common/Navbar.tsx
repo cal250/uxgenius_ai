@@ -18,7 +18,7 @@ export default function Header() {
         <Navbar.Toggle className="ml-2" />
       </div>
       <Navbar.Collapse className="mt-4 md:mt-0">
-        <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
+        <Navbar.Link href="/product" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
           Product
         </Navbar.Link>
         <Navbar.Link href="#" className="text-gray-600 hover:text-gray-900 text-base py-2 md:py-0">
