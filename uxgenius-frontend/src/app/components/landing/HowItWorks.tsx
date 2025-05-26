@@ -7,7 +7,7 @@ const HowItWorksSection: React.FC = () => {
   return (
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-extrabold text-center text-[#111928] font-['Outfit'] mb-6">
+        <h2 className="text-5xl font-black text-center text-black mb-6">
           How it works - Fast, Actionable UX Insights in 3 Steps
         </h2>
         <p className="text-xl text-center text-[#6b7280] font-['Poppins'] max-w-4xl mx-auto mb-16">
