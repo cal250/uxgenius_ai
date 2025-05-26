@@ -37,6 +37,8 @@ export default function BadUXAnalogies() {
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900">
                          Our team has seen almost everything...
                     </h2>
+                    <p>Start free, run one audit, and spot what’s silently killing conversions.
+                    </p>
 
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
                          {analogies.map((analogy, index) => (
