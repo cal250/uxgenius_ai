@@ -12,7 +12,7 @@ interface CustomNavLinkProps {
 }
 
 const CustomNavLink = ({ href, children, className = '' }: CustomNavLinkProps) => (
-  <Link href={href} className={`text-[#111928] hover:text-gray-900 text-sm no-underline font-medium ${className}`}>
+  <Link href={href} className={`text-black hover:text-gray-900 text-base no-underline font-medium ${className}`}>
     {children}
   </Link>
 );
@@ -67,7 +67,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <div className="text-[#111928] hidden md:flex items-center w-[464px] h-6 gap-4 ml-12 font-medium text-base font-['Poppins']">
+          <div className="text-black hidden md:flex items-center w-[464px] h-6 gap-4 ml-12 font-medium text-lg">
             <CustomNavLink href="/product">Product</CustomNavLink>
             <CustomNavLink href="/services">Services</CustomNavLink>
             <CustomNavLink href="/pricing">Pricing</CustomNavLink>
@@ -78,10 +78,10 @@ export default function Header() {
 
         {/* Desktop Auth Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          <button className="text-[#111928] hover:text-gray-900 font-medium text-sm">
+          <button className="text-black hover:text-gray-900 font-medium text-base">
             Log In
           </button>
-          <button className="bg-[#1A56DB] text-white px-6 py-2 rounded-lg hover:bg-blue-700 text-sm whitespace-nowrap">
+          <button className="bg-[#1A56DB] text-white px-6 py-2 rounded-lg hover:bg-blue-700 text-base whitespace-nowrap">
             Get started
           </button>
         </div>
@@ -93,16 +93,16 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <Navbar.Collapse className="md:hidden">
-          <CustomNavLink href="/product" className="text-[#111928] py-3 block">Product</CustomNavLink>
-          <CustomNavLink href="/services" className="text-[#111928] py-3 block">Services</CustomNavLink>
-          <CustomNavLink href="/pricing" className="text-[#111928] py-3 block">Pricing</CustomNavLink>
-          <CustomNavLink href="/use-case" className="text-[#111928]py-3 block">Use Cases</CustomNavLink>
-          <CustomNavLink href="/contact" className=" py-3 block">Contact</CustomNavLink>
+          <CustomNavLink href="/product" className="text-black py-3 block">Product</CustomNavLink>
+          <CustomNavLink href="/services" className="text-black py-3 block">Services</CustomNavLink>
+          <CustomNavLink href="/pricing" className="text-black py-3 block">Pricing</CustomNavLink>
+          <CustomNavLink href="/use-case" className="text-black py-3 block">Use Cases</CustomNavLink>
+          <CustomNavLink href="/contact" className="text-black py-3 block">Contact</CustomNavLink>
           <div className="flex flex-col gap-3 pt-4 border-t border-gray-200">
-            <button className="text-[#111928] hover:text-gray-900 font-medium text-sm text-left">
+            <button className="text-black hover:text-gray-900 font-medium text-base text-left">
               Log In
             </button>
-            <button className="bg-[#1A56DB] text-white px-6 py-2 rounded-lg hover:bg-blue-700 text-sm">
+            <button className="bg-[#1A56DB] text-white px-6 py-2 rounded-lg hover:bg-blue-700 text-base">
               Get started
             </button>
           </div>
