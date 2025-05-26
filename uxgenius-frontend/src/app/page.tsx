@@ -19,10 +19,10 @@ export default function Home() {
       <Header />
 
       <HeroSection />
-      
-      <HowItWorks />
 
       <Features />
+      
+      <HowItWorks />
 
       <Solutions />
 
