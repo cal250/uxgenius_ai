@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <section className="bg-gray-50">
+    <section className="bg-gradient-to-br from-white via-gray-50 to-green-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-20">
         <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-12">
           {/* Text Content */}
