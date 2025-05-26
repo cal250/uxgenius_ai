@@ -1,11 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
 
 const UXAuditComponent = () => {
   return (
-    <div className="flex flex-col md:flex-row bg-gradient-to-r from-green-50 to-gray-100 p-8 min-h-screen">
+    <div className="w-[1440px] h-[790px] mx-auto flex flex-col md:flex-row bg-gradient-to-r from-green-50 to-gray-100 p-8 gap-8">
       {/* Left Section */}
-      <div className="md:w-1/2 p-6 space-y-6">
-        <h1 className="text-3xl font-bold text-gray-800">What&#39;s Inside a UXGenius Audit</h1>
+      <div className="md:w-[596px] p-6 space-y-6">
+        <h1 className="text-4xl font-extrabold text-gray-800">What&#39;s Inside a UXGenius Audit</h1>
         <p className="text-gray-600">
           See exactly how we break down your site&#39;s user experience—from high-level scoring to deep, actionable recommendations. Every audit is built on the proven UX principles and backed by AI-driven insights.
         </p>
@@ -59,15 +60,16 @@ const UXAuditComponent = () => {
       </div>
 
       {/* Right Section */}
-      <div className="md:w-1/2 flex justify-center items-center">
-        <div className="relative">
-          <div className="w-[500px] h-[600px] bg-gray-200 rounded-lg shadow-lg flex items-center justify-center">
-            <img
-              src="/images/dash.png"
-              alt="Placeholder"
-              className="object-cover"
-            />
-          </div>
+      <div className="md:w-[596px] flex justify-center items-center">
+        <div className="relative w-full h-full">
+          <Image
+            src="/images/dash.png"
+            alt="UXGenius Dashboard Preview"
+            width={700}
+            height={790}
+            className="object-cover rounded-lg shadow-lg"
+            priority
+          />
         </div>
       </div>
     </div>

@@ -1,4 +1,3 @@
-// app/page.tsx
 import HeroSection from '@/components/landing/HeroSection';
 import ValueProps from '@/components/landing/ValueProps';
 import HowItWorks from '@/components/landing/HowItWorks';
@@ -16,7 +15,7 @@ import Header from '@/components/common/Navbar';
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="bg-[#fafbfc] min-h-screen">
       <Header />
 
       <HeroSection />

@@ -1,69 +1,113 @@
 'use client';
 
-import {
-  HiMegaphone,
-  HiShoppingCart,
-  HiClipboardDocumentCheck,
-  HiRocketLaunch
-} from 'react-icons/hi2';
+import React from 'react';
+import Image from 'next/image';
 
-export default function Solutions() {
-  const teams = [
-    {
-      icon: <HiMegaphone className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />,
-      title: "Marketing Teams",
-      description: "Find UX gaps that hurt your messaging, CTAs, and user flows—then fix them in minutes."
-    },
-    {
-      icon: <HiShoppingCart className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />,
-      title: "Ecommerce Teams",
-      description: "We highlight issues that frustrate shoppers—so you can recover abandoned carts and boost AOV."
-    },
-    {
-      icon: <HiClipboardDocumentCheck className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />,
-      title: "Product Managers",
-      description: "Use audits as a fast QA pass for launches, onboarding flows, and MVPs. Ship faster and smarter."
-    },
-    {
-      icon: <HiRocketLaunch className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />,
-      title: "Startup Founders",
-      description: "Cut through the noise and get a clear list of changes that will improve engagement and revenue from day one."
-    }
-  ];
-
+const SolutionsSection: React.FC = () => {
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900">
-          Our Solutions Are Built <br className="hidden sm:block" />
-          for Real-World Teams
-        </h2>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-          {teams.map((team, index) => (
-            <div
-              key={index}
-              className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="mb-4 sm:mb-6 text-blue-600">
-                {team.icon}
+    <section className="bg-[#f3f4f6] py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-4xl font-extrabold text-[#111928] mb-6">
+              Our Solutions Are Built for Real-World Teams
+            </h2>
+            <p className="text-xl text-[#6b7280] mb-8">
+              Whether you're launching your first product or optimizing a 7-figure store, UXGenius helps your team identify friction, boost conversions, and move faster-with zero design overhead.
+            </p>
+            <a href="#" className="inline-flex items-center text-lg font-medium text-[#1c64f2]">
+              Learn more
+              <Image 
+                src="/images/img_chevronright_blue_a700.svg" 
+                alt="Arrow right" 
+                width={12} 
+                height={12} 
+                className="ml-2"
+              />
+            </a>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <div className="flex items-start mb-4">
+                <div className="bg-[#e1effe] rounded-lg p-2 mr-4">
+                  <Image 
+                    src="/images/img_announcement03.svg" 
+                    alt="Announcement icon" 
+                    width={32} 
+                    height={32} 
+                  />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#111928] mb-1">
+                    Marketing Teams
+                  </h3>
+                  <p className="text-base text-[#6b7280]">
+                    Find UX gaps that hear your messaging, CTAs, and user flows-then fix them in minutes.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
-                {team.title}
-              </h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                {team.description}
-              </p>
+              <div className="flex items-start mt-8">
+                <div className="bg-[#e1effe] rounded-lg p-2 mr-4">
+                  <Image 
+                    src="/images/img_gift01.svg" 
+                    alt="Gift icon" 
+                    width={32} 
+                    height={32} 
+                  />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#111928] mb-1">
+                    Product Managers
+                  </h3>
+                  <p className="text-base text-[#6b7280]">
+                    Use audits as a fast QA pass for launches, onboarding flows, and MVPs. Ship faster and smarter.
+                  </p>
+                </div>
+              </div>
             </div>
-          ))}
-        </div>
-
-        <div className="mt-8 sm:mt-12 text-center">
-          <button className="text-blue-600 font-semibold hover:text-blue-700 text-sm sm:text-base transition-colors">
-            Learn more →
-          </button>
+            <div>
+              <div className="flex items-start mb-4">
+                <div className="bg-[#e1effe] rounded-lg p-2 mr-4">
+                  <Image 
+                    src="/images/img_shoppingcart03.svg" 
+                    alt="Shopping cart icon" 
+                    width={32} 
+                    height={32} 
+                  />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#111928] mb-1">
+                    Ecommerce Teams
+                  </h3>
+                  <p className="text-base text-[#6b7280]">
+                    We highlight issues that frustrate shoppers-so you can recover abandoned carts and boost AOV.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start mt-8">
+                <div className="bg-[#e1effe] rounded-lg p-2 mr-4">
+                  <Image 
+                    src="/images/img_rocket02.svg" 
+                    alt="Rocket icon" 
+                    width={32} 
+                    height={32} 
+                  />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#111928] mb-1">
+                    Startup Founders
+                  </h3>
+                  <p className="text-base text-[#6b7280]">
+                    Cut through the noice and get a clear list of change that will improve engagement an revenue from day one.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default SolutionsSection;

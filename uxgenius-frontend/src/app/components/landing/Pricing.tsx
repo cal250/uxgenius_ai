@@ -1,6 +1,10 @@
 'use client';
 
 // app/components/Pricing.tsx
+import React from 'react';
+import Image from 'next/image';
+import Button from '../ui/Button';
+import Tabs from '../ui/Tabs';
 import { HiCheckBadge, HiArrowTrendingUp, HiGlobeAlt } from 'react-icons/hi2';
 import PricingHeader from '../pricing/PricingHeader';
 import PricingCard from '../pricing/PricingCard';
@@ -71,29 +75,351 @@ const pricingPlans: PricingPlan[] = [
   }
 ];
 
-// Main Pricing Component
-export default function Pricing() {
+const PricingSection: React.FC = () => {
+  const [activeTab, setActiveTab] = React.useState('monthly');
+
+  const handleTabChange = (tabId: string) => {
+    setActiveTab(tabId);
+  };
+
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <PricingHeader />
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-          {pricingPlans.map((plan, index) => (
-            <PricingCard key={plan.name} plan={plan} />
-          ))}
+    <section className="py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-extrabold text-center text-[#111928] font-['Outfit'] mb-6">
+          Built for teams that care about growth, not guesswork
+        </h2>
+        <p className="text-xl text-center text-[#6b7280] font-['Poppins'] max-w-4xl mx-auto mb-12">
+          UXGenius gives you the clarity, insights, and tools to turn UX problems into profit-whether you're scaling a product, running an ecom brand, or improving customer journeys that drive revenue gains.
+        </p>
+        <div className="flex justify-center mb-12">
+          <Tabs
+            tabs={[
+              { id: 'monthly', label: 'Monthly' },
+              { id: 'yearly', label: 'Yearly' },
+            ]}
+            defaultTab={activeTab}
+            onChange={handleTabChange}
+            className="max-w-xs"
+          />
         </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Architect Plan */}
+          <div className="bg-white rounded-lg border border-[#e5e7eb] shadow-sm p-8 flex flex-col">
+            <div className="flex flex-col items-center mb-6">
+              <Image 
+                src="/images/img_ruler.svg" 
+                alt="Ruler icon" 
+                width={112} 
+                height={112} 
+                className="mb-4"
+              />
+              <h3 className="text-2xl font-semibold text-[#111928] font-['Outfit']">
+                Architect
+              </h3>
+            </div>
+            <p className="text-lg text-center text-[#6b7280] font-['Poppins'] mb-8">
+              For teams and operators who need deep audits, better insights and reports on multiple pages.
+            </p>
+            <div className="flex items-end justify-center mb-8">
+              <span className="text-5xl font-extrabold text-[#111928] font-['Outfit']">$29</span>
+              <span className="text-lg text-[#6b7280] font-['Inter'] ml-2">/month</span>
+            </div>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  AI UX Agent coaching
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  Full Heuristic Evaluation
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  Prioritized Issues by ROI impact
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  Track Audit History & Changes
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  Multiple Pages per Audit (up to 3)
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  And Much More
+                </span>
+              </li>
+            </ul>
+            <Button 
+              variant="primary" 
+              className="w-full rounded-lg bg-[#1a56db] text-white py-2.5 px-5 mt-auto"
+            >
+              <span className="text-sm font-medium font-['Poppins']">Get started</span>
+            </Button>
+          </div>
 
-        <div className="mt-8 sm:mt-12 text-center">
-          <a
-            href="#"
-            className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 text-sm sm:text-base transition-colors"
-          >
+          {/* Visionary Plan */}
+          <div className="bg-white rounded-lg border border-[#e5e7eb] shadow-sm p-8 flex flex-col">
+            <div className="flex flex-col items-center mb-6">
+              <Image 
+                src="/images/img_innovative.png" 
+                alt="Innovative icon" 
+                width={112} 
+                height={112} 
+                className="mb-4"
+              />
+              <h3 className="text-2xl font-semibold text-[#111928] font-['Outfit']">
+                Visionary
+              </h3>
+            </div>
+            <p className="text-lg text-center text-[#6b7280] font-['Poppins'] mb-8">
+              Designed for high-performing teams, ecommerce professionals or SaaS leaders
+            </p>
+            <div className="flex items-end justify-center mb-8">
+              <span className="text-5xl font-extrabold text-[#111928] font-['Outfit']">$79</span>
+              <span className="text-lg text-[#6b7280] font-['Inter'] ml-2">/month</span>
+            </div>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base font-semibold text-[#111928] font-['Inter']">
+                  Everything from the Architect Plan Plus...
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  CTA Effectiveness Analysis
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  Conversion Friction Detection
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  Accessibility check (Color, Fonts, WCAG)
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  Tone & Microcopy Clarity Check
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  Multiple Pages per Audit (up to 10)
+                </span>
+              </li>
+            </ul>
+            <Button 
+              variant="primary" 
+              className="w-full rounded-lg bg-[#1a56db] text-white py-2.5 px-5 mt-auto"
+            >
+              <span className="text-sm font-medium font-['Poppins']">Get started</span>
+            </Button>
+          </div>
+
+          {/* Omniscient Plan */}
+          <div className="bg-white rounded-lg border border-[#e5e7eb] shadow-sm p-8 flex flex-col">
+            <div className="flex flex-col items-center mb-6">
+              <Image 
+                src="/images/img_artificialintelligence2.svg" 
+                alt="AI icon" 
+                width={112} 
+                height={112} 
+                className="mb-4"
+              />
+              <h3 className="text-2xl font-semibold text-[#111928] font-['Outfit']">
+                Omniscient
+              </h3>
+            </div>
+            <p className="text-lg text-center text-[#6b7280] font-['Poppins'] mb-8">
+              All-access UX intelligence: team dashboards, white-labled reports, premium AI agent logic.
+            </p>
+            <div className="flex items-end justify-center mb-8">
+              <span className="text-5xl font-extrabold text-[#111928] font-['Outfit']">$199</span>
+              <span className="text-lg text-[#6b7280] font-['Inter'] ml-2">/month</span>
+            </div>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base font-semibold text-[#111928] font-['Inter']">
+                  Everything from the Visionary Plan Plus...
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  White-Labeled Reports & Tools
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  AI-Powered Competitor Comparison
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  Personalized Strategy Brief
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  Onboarding Flow Clarity Audit
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Image 
+                  src="/images/img_check_teal_600.svg" 
+                  alt="Check icon" 
+                  width={14} 
+                  height={14} 
+                  className="mr-3"
+                />
+                <span className="text-base text-[#111928] font-['Poppins']">
+                  Multiple Pages per Audit (unlimited)
+                </span>
+              </li>
+            </ul>
+            <Button 
+              variant="primary" 
+              className="w-full rounded-lg bg-[#1a56db] text-white py-2.5 px-5 mt-auto"
+            >
+              <span className="text-sm font-medium font-['Poppins']">Get started</span>
+            </Button>
+          </div>
+        </div>
+        <div className="text-center mt-8">
+          <a href="#" className="text-base font-medium text-[#1a56db] font-['Poppins']">
             See the full pricing plan with all the available features
-            <span className="ml-1">→</span>
           </a>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default PricingSection;
