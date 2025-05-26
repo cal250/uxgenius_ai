@@ -1,13 +1,37 @@
 'use client';
 
 import { Navbar } from 'flowbite-react';
+import Link from 'next/link';
+import { ReactNode } from 'react';
+
+interface CustomNavLinkProps {
+  href: string;
+  children: ReactNode;
+  className?: string;
+}
+
+const CustomNavLink = ({ href, children, className = '' }: CustomNavLinkProps) => (
+  <Link href={href} className={`text-black hover:text-gray-900 text-sm no-underline font-medium ${className}`}>
+    {children}
+  </Link>
+);
 
 export default function Header() {
   return (
     <>
       <style jsx global>{`
-        .flowbite-navbar-link::before {
+        .custom-nav-link {
+          position: relative !important;
+        }
+        .custom-nav-link::before,
+        .custom-nav-link::after {
           display: none !important;
+          content: none !important;
+        }
+        .custom-nav-link > span::before,
+        .custom-nav-link > span::after {
+          display: none !important;
+          content: none !important;
         }
       `}</style>
       <Navbar fluid rounded className="w-[90%] mx-auto px-4 py-4 md:py-6 bg-gray-200 mt-4">
@@ -18,21 +42,11 @@ export default function Header() {
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-6">
-            <Navbar.Link href="/product" className="text-black hover:text-gray-900 text-sm no-underline font-medium flowbite-navbar-link">
-              Product
-            </Navbar.Link>
-            <Navbar.Link href="/services" className="text-black hover:text-gray-900 text-sm no-underline font-medium flowbite-navbar-link">
-              Services
-            </Navbar.Link>
-            <Navbar.Link href="/pricing" className="text-black hover:text-gray-900 text-sm no-underline font-medium flowbite-navbar-link">
-              Pricing
-            </Navbar.Link>
-            <Navbar.Link href="/use-case" className="text-black hover:text-gray-900 text-sm no-underline font-medium flowbite-navbar-link">
-              Use Cases
-            </Navbar.Link>
-            <Navbar.Link href="/contact" className="text-black hover:text-gray-900 text-sm no-underline font-medium flowbite-navbar-link">
-              Contact
-            </Navbar.Link>
+            <CustomNavLink href="/product">Product</CustomNavLink>
+            <CustomNavLink href="/services">Services</CustomNavLink>
+            <CustomNavLink href="/pricing">Pricing</CustomNavLink>
+            <CustomNavLink href="/use-case">Use Cases</CustomNavLink>
+            <CustomNavLink href="/contact">Contact</CustomNavLink>
           </div>
         </div>
 
@@ -53,21 +67,11 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <Navbar.Collapse className="md:hidden">
-          <Navbar.Link href="/product" className="text-black hover:text-gray-900 text-sm py-2 no-underline font-medium flowbite-navbar-link">
-            Product
-          </Navbar.Link>
-          <Navbar.Link href="/services" className="text-black hover:text-gray-900 text-sm py-2 no-underline font-medium flowbite-navbar-link">
-            Services
-          </Navbar.Link>
-          <Navbar.Link href="/pricing" className="text-black hover:text-gray-900 text-sm py-2 no-underline font-medium flowbite-navbar-link">
-            Pricing
-          </Navbar.Link>
-          <Navbar.Link href="/use-case" className="text-black hover:text-gray-900 text-sm py-2 no-underline font-medium flowbite-navbar-link">
-            Use Cases
-          </Navbar.Link>
-          <Navbar.Link href="/contact" className="text-black hover:text-gray-900 text-sm py-2 no-underline font-medium flowbite-navbar-link">
-            Contact
-          </Navbar.Link>
+          <CustomNavLink href="/product" className="py-2 block">Product</CustomNavLink>
+          <CustomNavLink href="/services" className="py-2 block">Services</CustomNavLink>
+          <CustomNavLink href="/pricing" className="py-2 block">Pricing</CustomNavLink>
+          <CustomNavLink href="/use-case" className="py-2 block">Use Cases</CustomNavLink>
+          <CustomNavLink href="/contact" className="py-2 block">Contact</CustomNavLink>
           <div className="flex flex-col gap-3 pt-4 border-t border-gray-200">
             <button className="text-black hover:text-gray-900 font-medium text-sm text-left">
               Log In
